@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Quiz_App">
+    <!-- Allow resizing of the UI when the keyboard is triggered in the app/force portrait orientation and custom action bar -->
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar"
+            android:windowSoftInputMode="adjustResize"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
