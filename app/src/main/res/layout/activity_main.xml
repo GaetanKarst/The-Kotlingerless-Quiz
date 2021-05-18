@@ -7,7 +7,6 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@drawable/neon_background"
-    android:theme="@style/NoActionBar"
     tools:context=".MainActivity">
 
     <TextView
@@ -53,8 +52,8 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/et_name"
