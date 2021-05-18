@@ -16,7 +16,7 @@ class QuestionActivity : AppCompatActivity() {
 
     private fun displayQuestion1(list : ArrayList<Question>) : Unit {
         val questionText = findViewById<TextView>(R.id.question_text);
-//        questionText.setText(list.get(0))
+        questionText.setText(list.get(0).question);
         println(list.get(0));
 
     }
