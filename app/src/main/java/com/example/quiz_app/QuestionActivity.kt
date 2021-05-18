@@ -3,11 +3,14 @@ package com.example.quiz_app
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.text.method.LinkMovementMethod
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import java.util.*
+import kotlin.collections.ArrayList
 
 var questionIndex: Int = 0;
 var score: Int = 0;
@@ -22,7 +25,7 @@ class QuestionActivity : AppCompatActivity() {
         displayQuestion(questionList, questionIndex);
     }
 
-    private fun displayQuestion(list : ArrayList<Question>, index: Int) : Unit {
+    private fun displayQuestion(list: ArrayList<Question>, index: Int): Unit {
         val questionText = findViewById<TextView>(R.id.question_text);
         val questionImage = findViewById<ImageView>(R.id.question_image);
         val answer1 = findViewById<TextView>(R.id.question_answer_1);
@@ -53,24 +56,34 @@ class QuestionActivity : AppCompatActivity() {
         }
     }
 
-    private fun answerClicked(selectedAnswer: TextView, index: Int) : Boolean{
+    private fun answerClicked(selectedAnswer: TextView, index: Int): Boolean {
+
         if (selectedAnswer.text.toString() == questionList.get(index).correctAnswer) {
             selectedAnswer.setTextColor(Color.parseColor("#44FF99"));
-            questionIndex++;
-            score++;
+            incrementScoreAndQuestionNb();
             Toast.makeText(this, "Correct Answer!🎉", Toast.LENGTH_SHORT).show();
+            Handler().postDelayed({
+                showNextQuestion();
+            }, 2000);
             return true;
         }
+
         selectedAnswer.setTextColor(Color.parseColor("#FE0805"));
         Toast.makeText(this, "Wrong Answer!😵", Toast.LENGTH_SHORT).show();
         return false;
     }
 
-    override fun onResume() {
-        super.onResume()
+    private fun showNextQuestion(): Unit {
+        displayQuestion(questionList, questionIndex);
+    }
 
-        println("The activity is on Resume")
+    // TODO: Implement the reset color function
+//    private fun resetAnswerColors() : Unit{
+//        answer
+//    }
 
-
+    private fun incrementScoreAndQuestionNb(): Unit {
+        score++;
+        questionIndex++;
     }
 }
