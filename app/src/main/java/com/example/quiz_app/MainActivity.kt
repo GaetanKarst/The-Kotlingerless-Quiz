@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun startButtonListen() {
+    private fun startButtonListen() : Unit {
         val startButton = findViewById<Button>(R.id.start_button);
         val etName = findViewById<androidx.appcompat.widget.AppCompatEditText>(R.id.et_name);
 
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun getPlayerName() {
+    private fun getPlayerName() : Unit {
         val nameField = findViewById<EditText>(R.id.et_name);
         val name = nameField.text.toString();
         val intent = Intent(this, QuestionActivity::class.java).apply {
