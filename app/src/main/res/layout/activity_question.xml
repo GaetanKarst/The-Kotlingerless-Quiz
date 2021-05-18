@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/neon_background"
+    android:gravity="center"
     tools:context=".QuestionActivity">
 
     <androidx.cardview.widget.CardView
@@ -23,19 +24,39 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="15dp">
+<!--Question-->
             <TextView
                 android:id="@+id/question_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 />
+<!--Answers-->
             <TextView
-                android:id="@+id/question_answers"
+                android:id="@+id/question_answer_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 />
-
+            <TextView
+                android:id="@+id/question_answer_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/question_answer_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/question_answer_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                />
+<!--End of the answers-->
 
         </LinearLayout>
 
