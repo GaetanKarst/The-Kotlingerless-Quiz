@@ -31,40 +31,39 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 />
-<!--Answers-->
-            <LinearLayout
+
+            <ImageView
+                android:id="@+id/question_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:gravity="center"/>
+<!--Answers-->
             <TextView
                 android:id="@+id/question_answer_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="left"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:layout_marginBottom="25dp"
                 />
             <TextView
                 android:id="@+id/question_answer_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="right"
-                android:layout_marginRight="25dp"
+                android:gravity="center"
                 />
-            </LinearLayout>
             <TextView
                 android:id="@+id/question_answer_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="left"
-                android:layout_marginLeft="25dp"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
                 />
             <TextView
                 android:id="@+id/question_answer_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="right"
-                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
                 />
 <!--End of the answers-->
 
