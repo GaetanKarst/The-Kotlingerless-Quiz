@@ -16,6 +16,7 @@ import kotlin.collections.ArrayList
 
 var questionIndex: Int = 0;
 var score: Int = 0;
+var name: String = "";
 val questionList = Constants.getQuestions();
 
 class QuestionActivity : AppCompatActivity() {
@@ -23,7 +24,8 @@ class QuestionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
 
-
+        name = intent.getStringExtra("EXTRA_NAME");
+        println(name);
         displayQuestion(questionList, questionIndex);
     }
 
@@ -105,12 +107,12 @@ class QuestionActivity : AppCompatActivity() {
 
     private fun finishTheGame(): Unit {
         val scoreString = score.toString();
-//        val name = intent.getStringExtra("EXTRA_NAME");
-//
-//        val intentName = Intent(this, EndScreen::class.java).apply {
-//            putExtra(EXTRA_NAME, name)
-//        }
-        val intent = Intent(this, EndScreen::class.java);
+
+        val intent = Intent(this, EndScreen::class.java).apply {
+            putExtra("EXTRA_SCORE", scoreString);
+            putExtra("EXTRA_NAME", name)
+        };
+
         startActivity(intent);
         finish();
     }

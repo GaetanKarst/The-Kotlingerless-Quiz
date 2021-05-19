@@ -16,7 +16,7 @@ class EndScreen : AppCompatActivity() {
         val score = intent.getStringExtra("EXTRA_SCORE");
         val nameField = findViewById<TextView>(R.id.name_display)
         val scoreField = findViewById<TextView>(R.id.score_display);
-        nameField.setText(name);
-        scoreField.setText(score);
+        nameField.setText("🎉 $name you finsihed the Kotlingerless Quiz! 🎉");
+        scoreField.setText("Your got $score right answers!");
     }
 }

@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         val nameField = findViewById<EditText>(R.id.et_name);
         val name = nameField.text.toString();
         val intent = Intent(this, QuestionActivity::class.java).apply {
-            putExtra(EXTRA_NAME, name);
+            putExtra("EXTRA_NAME", name);
         }
         startActivity(intent);
     }
