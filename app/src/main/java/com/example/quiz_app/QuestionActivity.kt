@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.text.method.LinkMovementMethod
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -24,9 +25,28 @@ class QuestionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
 
+        val actionBar = getSupportActionBar();
+
+        if (actionBar !== null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
+
         name = intent.getStringExtra("EXTRA_NAME");
         println(name);
         displayQuestion(questionList, questionIndex);
+    }
+
+    //TODO: Fix the back button
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        println("item ID is :" + item.itemId)
+        when (item.itemId) {
+            R.id.questions -> {
+                finish();
+                return true;
+            }
+        }
+        return super.onContextItemSelected(item);
     }
 
     private fun displayQuestion(list: ArrayList<Question>, index: Int): Unit {
