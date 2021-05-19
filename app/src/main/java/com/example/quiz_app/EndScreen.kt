@@ -27,6 +27,7 @@ class EndScreen : AppCompatActivity() {
         val restartButton = findViewById<Button>(R.id.restart_button);
         restartButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java);
+            finish();
             startActivity(intent);
         }
 
