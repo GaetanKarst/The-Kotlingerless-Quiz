@@ -13,13 +13,8 @@ class EndScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_end_screen)
 
-        val name = intent.getStringExtra("EXTRA_NAME")
-        val score = intent.getStringExtra("EXTRA_SCORE");
-        val nameField = findViewById<TextView>(R.id.name_display)
-        val scoreField = findViewById<TextView>(R.id.score_display);
-        nameField.setText("🎉 $name your finsished the Kotlingerless Quiz! 🎉");
-        scoreField.setText("Your got $score right answers!");
-
+        displayPlayerName();
+        displayPlayerScore();
         onClickRestartButton();
     }
 
@@ -31,5 +26,17 @@ class EndScreen : AppCompatActivity() {
             startActivity(intent);
         }
 
+    }
+
+    private fun displayPlayerName() : Unit {
+        val name = intent.getStringExtra("EXTRA_NAME")
+        val nameField = findViewById<TextView>(R.id.name_display)
+        nameField.setText("🎉 $name your finsished the Kotlingerless Quiz! 🎉");
+    }
+
+    private fun displayPlayerScore() : Unit {
+        val score = intent.getStringExtra("EXTRA_SCORE");
+        val scoreField = findViewById<TextView>(R.id.score_display);
+        scoreField.setText("Your got ${score} right answers!");
     }
 }

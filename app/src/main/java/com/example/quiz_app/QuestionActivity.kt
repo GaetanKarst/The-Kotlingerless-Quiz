@@ -134,6 +134,6 @@ class QuestionActivity : AppCompatActivity() {
         };
 
         startActivity(intent);
-        finish();
+//        finish();
     }
 }
