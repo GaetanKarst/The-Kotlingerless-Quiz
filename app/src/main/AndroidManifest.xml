@@ -9,18 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Quiz_App">
-<!--QuestionActivity-->
+        <activity android:name=".EndScreen"></activity>
+        <!-- QuestionActivity -->
         <activity
             android:name=".QuestionActivity"
-            android:theme="@style/Theme.Quiz_App"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="portrait">
-            <!--coupled with android parent add the up bar in the NavBar-->
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Quiz_App">
+
+            <!-- coupled with android parent add the up bar in the NavBar -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-        </activity>
-<!--MainActivity-->
+        </activity> <!-- MainActivity -->
         <!-- Allow resizing of the UI when the keyboard is triggered in the app/force portrait orientation and custom action bar -->
         <activity
             android:name=".MainActivity"

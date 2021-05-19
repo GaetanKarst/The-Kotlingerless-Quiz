@@ -1,10 +1,12 @@
 package com.example.quiz_app
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.text.method.LinkMovementMethod
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -57,33 +59,59 @@ class QuestionActivity : AppCompatActivity() {
     }
 
     private fun answerClicked(selectedAnswer: TextView, index: Int): Boolean {
+        val defaultTextColor: Int = selectedAnswer.getTextColors().getDefaultColor();
 
         if (selectedAnswer.text.toString() == questionList.get(index).correctAnswer) {
             selectedAnswer.setTextColor(Color.parseColor("#44FF99"));
             incrementScoreAndQuestionNb();
             Toast.makeText(this, "Correct Answer!🎉", Toast.LENGTH_SHORT).show();
             Handler().postDelayed({
+                selectedAnswer.setTextColor(Color.parseColor("#000000"))
                 showNextQuestion();
             }, 2000);
+
             return true;
         }
 
         selectedAnswer.setTextColor(Color.parseColor("#FE0805"));
         Toast.makeText(this, "Wrong Answer!😵", Toast.LENGTH_SHORT).show();
+        Handler().postDelayed({
+            selectedAnswer.setTextColor(Color.parseColor("#000000"))
+            questionIndex++;
+            showNextQuestion();
+        }, 2000);
+
         return false;
     }
 
     private fun showNextQuestion(): Unit {
+        if (questionIndex >= questionList.size) {
+            finishTheGame();
+        }else {
         displayQuestion(questionList, questionIndex);
+        }
     }
 
-    // TODO: Implement the reset color function
-//    private fun resetAnswerColors() : Unit{
-//        answer
-//    }
+    private fun displayScore() : Unit {
+        val scoreField = findViewById<TextView>(R.id.score_display);
+        scoreField.setText(score.toString());
+    }
 
     private fun incrementScoreAndQuestionNb(): Unit {
         score++;
+        displayScore();
         questionIndex++;
+    }
+
+    private fun finishTheGame(): Unit {
+        val scoreString = score.toString();
+//        val name = intent.getStringExtra("EXTRA_NAME");
+//
+//        val intentName = Intent(this, EndScreen::class.java).apply {
+//            putExtra(EXTRA_NAME, name)
+//        }
+        val intent = Intent(this, EndScreen::class.java);
+        startActivity(intent);
+        finish();
     }
 }
