@@ -21,9 +21,6 @@ class EndScreen : AppCompatActivity() {
         displayPlayerScore();
         fetchScoreBoard();
         onClickRestartButton();
-
-        
-
     }
 
     private fun onClickRestartButton() : Unit {
@@ -33,17 +30,18 @@ class EndScreen : AppCompatActivity() {
             finish();
             startActivity(intent);
         }
-
     }
 
     private fun displayPlayerName() : Unit {
         val name = intent.getStringExtra("EXTRA_NAME")
+
         val nameField = findViewById<TextView>(R.id.name_display)
-        nameField.setText("🎉 $name your finsished the Kotlingerless Quiz! 🎉");
+        nameField.setText("🎉 $name you finished the Kotlingerless Quiz! 🎉");
     }
 
     private fun displayPlayerScore() : Unit {
         val score = intent.getStringExtra("EXTRA_SCORE");
+
         val scoreField = findViewById<TextView>(R.id.score_display);
         scoreField.setText("Your got ${score} right answers!");
     }
@@ -53,7 +51,7 @@ class EndScreen : AppCompatActivity() {
         val score1 = findViewById<TextView>(R.id.score1);
 
         val queue = Volley.newRequestQueue(this);
-        val url = "http://192.168.0.100:8080/scores"
+        val url = "http://192.168.0.100:8080"
 
         val scoreRequest = StringRequest(
             Request.Method.GET, url,

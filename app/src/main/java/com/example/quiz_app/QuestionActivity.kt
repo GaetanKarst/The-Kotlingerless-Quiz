@@ -31,7 +31,6 @@ class QuestionActivity : AppCompatActivity() {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-
         name = intent.getStringExtra("EXTRA_NAME");
         println(name);
         displayQuestion(questionList, questionIndex);
