@@ -59,7 +59,7 @@ class QuestionActivity : AppCompatActivity() {
         // TODO: Make it button but can't figure out how to set the text of an XML button element
         // TODO: Make a progressBar!
         questionText.setText(list.get(index).question);
-//        questionImage.setImageResource(list.get(index).image);
+        questionImage.setImageResource(list.get(index).image);
 
         answer1.setText(list.get(index).answerOne)
         answer1.setOnClickListener() {
@@ -115,7 +115,7 @@ class QuestionActivity : AppCompatActivity() {
 
     private fun displayScore() : Unit {
         val scoreField = findViewById<TextView>(R.id.score_display);
-        scoreField.setText(score.toString());
+        scoreField.setText("Score: ${score.toString()} 🌟");
     }
 
     private fun incrementScoreAndQuestionNb(): Unit {

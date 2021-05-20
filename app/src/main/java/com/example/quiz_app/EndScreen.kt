@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.TextView
 import android.content.Intent
 import android.widget.Button
+import android.widget.ImageView
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
@@ -18,6 +19,7 @@ class EndScreen : AppCompatActivity() {
         setContentView(R.layout.activity_end_screen)
 
         displayPlayerName();
+        insertSuccessImage();
         displayPlayerScore();
         fetchScoreBoard();
         onClickRestartButton();
@@ -25,6 +27,7 @@ class EndScreen : AppCompatActivity() {
 
     private fun onClickRestartButton() : Unit {
         val restartButton = findViewById<Button>(R.id.restart_button);
+
         restartButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java);
             finish();
@@ -43,7 +46,12 @@ class EndScreen : AppCompatActivity() {
         val score = intent.getStringExtra("EXTRA_SCORE");
 
         val scoreField = findViewById<TextView>(R.id.score_display);
-        scoreField.setText("Your got ${score} right answers!");
+        scoreField.setText("You got ${score} right answers!");
+    }
+
+    private fun insertSuccessImage() : Unit {
+        val imageField = findViewById<ImageView>(R.id.succes_image);
+        imageField.setImageResource(R.drawable.catsuccess);
     }
 
     private fun fetchScoreBoard() : Unit {
