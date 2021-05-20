@@ -40,7 +40,51 @@
             android:textSize="15sp"
             android:textColor="@color/black"
             />
-
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+            <TableRow>
+                <TextView
+                    android:id="@+id/name1"
+                    android:padding="3dip"/>
+                <TextView
+                    android:id="@+id/score1"
+                    android:padding="3dip"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/name2"
+                    android:padding="3dip"/>
+                <TextView
+                    android:id="@+id/score2"
+                    android:padding="3dip"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/name3"
+                    android:padding="3dip"/>
+                <TextView
+                    android:id="@+id/score3"
+                    android:padding="3dip"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/name4"
+                    android:padding="3dip"/>
+                <TextView
+                    android:id="@+id/score4"
+                    android:padding="3dip"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/name5"
+                    android:padding="3dip"/>
+                <TextView
+                    android:id="@+id/score5"
+                    android:padding="3dip"/>
+            </TableRow>
+        </TableLayout>
 
 
     </LinearLayout>
