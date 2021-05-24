@@ -21,6 +21,9 @@ object Constants {
         val question5 = Question(5, "What major programming languages was invented in 1972?", R.drawable.programming,
         "C", "Pascal", "Fortran", "Cobol", "C")
 
+        val question6 = Question(5, "What major programming languages was invented in 1972?", R.drawable.programming,
+            "C", "Pascal", "Fortran", "Cobol", "C")
+
         questionsList.add(question1);
         questionsList.add(question2);
         questionsList.add(question3);

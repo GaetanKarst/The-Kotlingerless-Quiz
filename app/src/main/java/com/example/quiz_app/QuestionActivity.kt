@@ -1,5 +1,6 @@
 package com.example.quiz_app
 
+import android.app.DownloadManager
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -12,13 +13,24 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+//import com.fasterxml.jackson.databind.ObjectMapper
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.reflect.typeOf
+import com.fasterxml.jackson.module.kotlin.*
 
 var questionIndex: Int = 0;
 var score: Int = 0;
 var name: String = "";
 val questionList = Constants.getQuestions();
+
+// TODO: fix the question storing variable
+var mapper = jacksonObjectMapper();
+var questions = ArrayList<Any>();
 
 class QuestionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +45,8 @@ class QuestionActivity : AppCompatActivity() {
 
         name = intent.getStringExtra("EXTRA_NAME");
         println(name);
+        fetchQuestion();
+        println(questions);
         displayQuestion(questionList, questionIndex);
     }
 
@@ -123,6 +137,19 @@ class QuestionActivity : AppCompatActivity() {
         displayScore();
         questionIndex++;
     }
+
+    private fun fetchQuestion() {
+        val queue = Volley.newRequestQueue(this)
+        val url = "https://opentdb.com/api.php?amount=50&difficulty=hard"
+
+        val questionRequest = StringRequest(
+            Request.Method.GET, url,
+            { response -> questions = mapper.readValue(response);},
+            { println("ERROR to get the questions")})
+
+        queue.add(questionRequest);
+    }
+
 
     private fun finishTheGame(): Unit {
         val scoreString = score.toString();

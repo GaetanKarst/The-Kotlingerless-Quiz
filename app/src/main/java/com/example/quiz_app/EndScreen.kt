@@ -54,6 +54,7 @@ class EndScreen : AppCompatActivity() {
         imageField.setImageResource(R.drawable.catsuccess);
     }
 
+    //TODO: make the scoreboard work
     private fun fetchScoreBoard() : Unit {
         val name1 = findViewById<TextView>(R.id.name1);
         val score1 = findViewById<TextView>(R.id.score1);
