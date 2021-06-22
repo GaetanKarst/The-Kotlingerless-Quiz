@@ -2,6 +2,8 @@
 
 *This was created during my time as a student at Code Chrysalis*
 
+![Screen Shot 2021-06-23 at 0 03 29](https://user-images.githubusercontent.com/66731438/122949680-d1111b80-d3b6-11eb-90d0-e63e6b7fc456.png)
+
 ## Project
 
 The The Kotlingerless Quiz is a simple quiz made using Kotlin and android API. Players have to go through a serie of questions in order to score points. 

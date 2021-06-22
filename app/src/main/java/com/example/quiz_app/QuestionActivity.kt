@@ -28,9 +28,9 @@ var score: Int = 0;
 var name: String = "";
 val questionList = Constants.getQuestions();
 
-// TODO: fix the question storing variable
-var mapper = jacksonObjectMapper();
-var questions = ArrayList<Any>();
+//// TODO: fix the question storing variable
+//var mapper = jacksonObjectMapper();
+//var questions = ArrayList<Any>();
 
 class QuestionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,8 +45,8 @@ class QuestionActivity : AppCompatActivity() {
 
         name = intent.getStringExtra("EXTRA_NAME");
         println(name);
-        fetchQuestion();
-        println(questions);
+//        fetchQuestion();
+//        println(questions);
         displayQuestion(questionList, questionIndex);
     }
 
@@ -138,17 +138,17 @@ class QuestionActivity : AppCompatActivity() {
         questionIndex++;
     }
 
-    private fun fetchQuestion() {
-        val queue = Volley.newRequestQueue(this)
-        val url = "https://opentdb.com/api.php?amount=50&difficulty=hard"
-
-        val questionRequest = StringRequest(
-            Request.Method.GET, url,
-            { response -> questions = mapper.readValue(response);},
-            { println("ERROR to get the questions")})
-
-        queue.add(questionRequest);
-    }
+//    private fun fetchQuestion() {
+//        val queue = Volley.newRequestQueue(this)
+//        val url = "https://opentdb.com/api.php?amount=50&difficulty=hard"
+//
+//        val questionRequest = StringRequest(
+//            Request.Method.GET, url,
+//            { response -> questions = mapper.readValue(response);},
+//            { println("ERROR to get the questions")})
+//
+//        queue.add(questionRequest);
+//    }
 
 
     private fun finishTheGame(): Unit {
