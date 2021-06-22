@@ -43,6 +43,11 @@ At the end of the quiz, is displayed the total score of the current players alon
 2. Create an Issue describing your contribution
 3. Submit a pull request for consideration
 
+## Authors
+
+- **Gaetan Karst** - _Initial work_ - [GaetanKarst](https://github.com/GaetanKarst)
+
+
 ## Licence
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
