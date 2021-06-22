@@ -1,16 +1,15 @@
-# The_Kotlingerless_Quiz
+# The-Kotlingerless-Quiz
 
 *This was created during my time as a student at Code Chrysalis*
 
 ![Screen Shot 2021-06-23 at 0 03 29](https://user-images.githubusercontent.com/66731438/122949680-d1111b80-d3b6-11eb-90d0-e63e6b7fc456.png)
 
-## Project
+## Introduction
 
-The The Kotlingerless Quiz is a simple quiz made using Kotlin and android API. Players have to go through a serie of questions in order to score points. 
+The Kotlingerless Quiz is a simple quiz made using Kotlin and android API. Players have to go through a series of questions in order to score points. 
 At the end of the quiz, is displayed the total score of the current players along with a scoreboard of players' scores stored in a database. 
-**The Database is not connected yet to the application although the back-end is all finished**
 
-In order to learn what the XML markup language really is, the design of the app has been entirely made coding in XML and no drop-down elements have been used during this project.
+**In order to learn what the XML markup language really is, the design of the app has been entirely made coding in XML, meaning that no drop-down elements have been used during this project.**
 
 ## Getting Started
 
@@ -23,14 +22,14 @@ In order to learn what the XML markup language really is, the design of the app 
 
 ### Front-end
 * [Kotlin](https://kotlinlang.org/docs/home.html) / XML Markup language
-* Android Studio - IDE specialized in android app development
+* [Android Studio](https://developer.android.com/studio) - IDE specialized in android app development
 
 ## Back-End
 * [Kotlin](https://kotlinlang.org/docs/home.html)
 * [Ktor](https://ktor.io/) - Server Side Kotlin Framework
 * [Exposed](https://github.com/JetBrains/Exposed) - Query Builder / ORM made by JetBrain
-* Postgres - Database system
-* IntelliJ IDEA
+* [Postgres](https://www.postgresql.org/) - Database system
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/) - IDE more optimized for backend development
 
 ## Application
 
