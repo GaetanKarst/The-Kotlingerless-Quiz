@@ -31,9 +31,12 @@ At the end of the quiz, is displayed the total score of the current players alon
 * [Postgres](https://www.postgresql.org/) - Database system
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/) - IDE more optimized for backend development
 
-## Application
+## Screenshots
 
-*IMAGE OF THE APPLICATION IN COMING SOON*
+<img width="373" alt="Screen Shot 2021-06-23 at 15 38 43" src="https://user-images.githubusercontent.com/66731438/123048536-77056a00-d439-11eb-92ed-b1db3fa1c084.png">
+<img width="373" alt="Screen Shot 2021-06-23 at 15 39 17" src="https://user-images.githubusercontent.com/66731438/123048556-7a98f100-d439-11eb-938c-9ea79ba30654.png">
+<img width="373" alt="Screen Shot 2021-06-23 at 15 39 42" src="https://user-images.githubusercontent.com/66731438/123048562-7bca1e00-d439-11eb-9070-46371d59cf54.png">
+<img width="373" alt="Screen Shot 2021-06-23 at 15 40 06" src="https://user-images.githubusercontent.com/66731438/123048565-7cfb4b00-d439-11eb-9747-2e148cafe3ec.png">
 
 ## Contributing
 

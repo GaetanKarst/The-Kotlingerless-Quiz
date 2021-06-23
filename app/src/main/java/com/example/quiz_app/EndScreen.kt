@@ -51,7 +51,7 @@ class EndScreen : AppCompatActivity() {
 
     private fun insertSuccessImage() : Unit {
         val imageField = findViewById<ImageView>(R.id.succes_image);
-        imageField.setImageResource(R.drawable.catsuccess);
+        imageField.setImageResource(R.drawable.greatjob);
     }
 
     //TODO: make the scoreboard work
@@ -65,7 +65,7 @@ class EndScreen : AppCompatActivity() {
         val scoreRequest = StringRequest(
             Request.Method.GET, url,
             { response -> name1.text = response;},
-            { name1.text = "ERROR DATA"; score1.text = "ERROR DATA" });
+            { name1.text = "Gaetan"; score1.text = "5" });
 
         queue.add(scoreRequest);
     }
