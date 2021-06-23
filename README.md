@@ -24,7 +24,8 @@ At the end of the quiz, is displayed the total score of the current players alon
 * [Kotlin](https://kotlinlang.org/docs/home.html) / XML Markup language
 * [Android Studio](https://developer.android.com/studio) - IDE specialized in android app development
 
-## [Back-end](https://github.com/GaetanKarst/Backend-The-Kotlingerless-Quiz)
+### Back-end 
+[link to backend repo](https://github.com/GaetanKarst/Backend-The-Kotlingerless-Quiz)
 * [Kotlin](https://kotlinlang.org/docs/home.html)
 * [Ktor](https://ktor.io/) - Server Side Kotlin Framework
 * [Exposed](https://github.com/JetBrains/Exposed) - Query Builder / ORM made by JetBrain
