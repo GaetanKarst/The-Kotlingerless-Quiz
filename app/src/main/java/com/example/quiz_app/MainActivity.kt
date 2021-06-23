@@ -17,9 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         // Hide status bar for immersive purpose (method deprecated on Android30)
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-
         startButtonListen();
-
     }
 
     private fun startButtonListen() : Unit {
@@ -46,7 +44,4 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent);
     }
-
-
-    
 }

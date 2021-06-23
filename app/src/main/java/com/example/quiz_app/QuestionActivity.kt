@@ -26,11 +26,9 @@ import com.fasterxml.jackson.module.kotlin.*
 var questionIndex: Int = 0;
 var score: Int = 0;
 var name: String = "";
-val questionList = Constants.getQuestions();
 
-//// TODO: fix the question storing variable
-//var mapper = jacksonObjectMapper();
-//var questions = ArrayList<Any>();
+/***** ACTIVATE FOR DEMO MODE ****/
+val questionList = Constants.getQuestions();
 
 class QuestionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,13 +42,10 @@ class QuestionActivity : AppCompatActivity() {
         }
 
         name = intent.getStringExtra("EXTRA_NAME");
-        println(name);
 //        fetchQuestion();
-//        println(questions);
         displayQuestion(questionList, questionIndex);
     }
 
-    //TODO: Fix the back button
     override fun onContextItemSelected(item: MenuItem): Boolean {
         println("item ID is :" + item.itemId)
         when (item.itemId) {
@@ -59,6 +54,7 @@ class QuestionActivity : AppCompatActivity() {
                 return true;
             }
         }
+
         return super.onContextItemSelected(item);
     }
 
@@ -70,8 +66,6 @@ class QuestionActivity : AppCompatActivity() {
         val answer3 = findViewById<TextView>(R.id.question_answer_3);
         val answer4 = findViewById<TextView>(R.id.question_answer_4);
 
-        // TODO: Make it button but can't figure out how to set the text of an XML button element
-        // TODO: Make a progressBar!
         questionText.setText(list.get(index).question);
         questionImage.setImageResource(list.get(index).image);
 
@@ -138,6 +132,8 @@ class QuestionActivity : AppCompatActivity() {
         questionIndex++;
     }
 
+  /***** ACTIVATE TO FETCH REAL QUESTIONS AND EXIT DEMO MODE ****/
+
 //    private fun fetchQuestion() {
 //        val queue = Volley.newRequestQueue(this)
 //        val url = "https://opentdb.com/api.php?amount=50&difficulty=hard"
@@ -160,6 +156,5 @@ class QuestionActivity : AppCompatActivity() {
         };
 
         startActivity(intent);
-//        finish();
     }
 }

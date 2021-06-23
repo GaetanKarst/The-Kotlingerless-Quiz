@@ -65,7 +65,7 @@ class EndScreen : AppCompatActivity() {
         val scoreRequest = StringRequest(
             Request.Method.GET, url,
             { response -> name1.text = response;},
-            { name1.text = "Gaetan"; score1.text = "5" });
+            { name1.text = "ERROR DATA"; score1.text = "ERROR DATA" });
 
         queue.add(scoreRequest);
     }
