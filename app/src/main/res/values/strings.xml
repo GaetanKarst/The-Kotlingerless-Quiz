@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Quiz_App</string>
+    <string name="app_name">The Kotlingerless Quiz</string>
     <string name="restart">Restart</string>
 </resources>

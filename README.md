@@ -33,10 +33,10 @@ At the end of the quiz, is displayed the total score of the current players alon
 
 ## Screenshots
 
-<img width="373" alt="Screen Shot 2021-06-23 at 15 38 43" src="https://user-images.githubusercontent.com/66731438/123048536-77056a00-d439-11eb-92ed-b1db3fa1c084.png">
-<img width="373" alt="Screen Shot 2021-06-23 at 15 39 17" src="https://user-images.githubusercontent.com/66731438/123048556-7a98f100-d439-11eb-938c-9ea79ba30654.png">
-<img width="373" alt="Screen Shot 2021-06-23 at 15 39 42" src="https://user-images.githubusercontent.com/66731438/123048562-7bca1e00-d439-11eb-9070-46371d59cf54.png">
-<img width="373" alt="Screen Shot 2021-06-23 at 15 40 06" src="https://user-images.githubusercontent.com/66731438/123048565-7cfb4b00-d439-11eb-9747-2e148cafe3ec.png">
+<img width="373" alt="Screen Shot 2021-06-23 at 15 49 04" src="https://user-images.githubusercontent.com/66731438/123049736-dadc6280-d43a-11eb-8dcf-072ee442d390.png">
+<img width="373" alt="Screen Shot 2021-06-23 at 15 49 23" src="https://user-images.githubusercontent.com/66731438/123049752-de6fe980-d43a-11eb-8b18-40ebed663e5d.png">
+<img width="373" alt="Screen Shot 2021-06-23 at 15 50 34" src="https://user-images.githubusercontent.com/66731438/123049755-dfa11680-d43a-11eb-8422-23f7d5a92eb7.png">
+<img width="373" alt="Screen Shot 2021-06-23 at 15 50 53" src="https://user-images.githubusercontent.com/66731438/123049757-e0d24380-d43a-11eb-9d4a-76e5c6174168.png">
 
 ## Contributing
 
